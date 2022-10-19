@@ -69,6 +69,7 @@ function App() {
       <h1 className={styles.title}>pomodoro</h1>
       <Tabs activeTab={activeTab} changeTab={changeTab} />
       <Counter
+        storedTimes={setTimes}
         times={currentTimes}
         handleTimes={handleCurrentTimes}
         activeTab={activeTab}

@@ -3,10 +3,12 @@ import styles from "./counter.module.scss";
 
 const Counter = ({
   times,
+  storedTimes,
   activeTab,
   handleTimes,
 }: {
   times: { pomodoro: number; short_break: number; long_break: number };
+  storedTimes: { pomodoro: number; short_break: number; long_break: number };
   handleTimes: (value: typeof times) => void;
   activeTab: "pomodoro" | "short_break" | "long_break";
 }) => {
@@ -38,9 +40,6 @@ const Counter = ({
 
     setCounterInterval(counterInterval);
   };
-  const storedTimes = JSON.parse(
-    localStorage.getItem("pafeo-set-times") as string
-  ) as typeof times;
   useEffect(() => {
     setTime(times[activeTab]);
   }, [times, activeTab]);
@@ -83,7 +82,7 @@ const Counter = ({
             cx="16"
             cy="16"
             style={{
-              strokeDashoffset: (time / storedTimes[activeTab]) * 100,
+              strokeDashoffset: (time / storedTimes[activeTab]) * 100 || 0,
               strokeLinecap: time === 0 ? "square" : "round",
             }}
           ></circle>

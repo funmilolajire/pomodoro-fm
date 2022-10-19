@@ -86,7 +86,7 @@ const Settings = ({
                         handleTimes({
                           ...times,
                           pomodoro:
-                            getMinutes(times.pomodoro) !== 0
+                            getMinutes(times.pomodoro) !== 1
                               ? times.pomodoro - 60000
                               : times.pomodoro,
                         })
@@ -143,7 +143,7 @@ const Settings = ({
                         handleTimes({
                           ...times,
                           short_break:
-                            getMinutes(times.short_break) !== 0
+                            getMinutes(times.short_break) !== 1
                               ? times.short_break - 60000
                               : times.short_break,
                         })
@@ -200,7 +200,7 @@ const Settings = ({
                         handleTimes({
                           ...times,
                           long_break:
-                            getMinutes(times.long_break) !== 0
+                            getMinutes(times.long_break) !== 1
                               ? times.long_break - 60000
                               : times.long_break,
                         })
