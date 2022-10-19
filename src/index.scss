@@ -1,0 +1,46 @@
+:root {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+button {
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible,
+button:focus-within {
+  outline: 0;
+}

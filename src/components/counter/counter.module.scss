@@ -1,0 +1,110 @@
+.counter {
+    width: 41rem;
+    height: 41rem;
+    border-radius: 50%;
+    background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+    box-shadow: -50px -50px 100px #272C5A,
+        50px 50px 100px #121530;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+        width: 36.6rem;
+        height: 36.6rem;
+        border-radius: 50%;
+        background: #161932;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .progress {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            transform: rotate(-90deg);
+            // For animations...
+            // transition: all 500ms ease-in;
+            // will-change: transform;
+
+            .progress-background {
+                fill: none;
+                stroke: transparent;
+                stroke-width: 1.2px;
+            }
+
+            .progress-main {
+                fill: none;
+                stroke-linecap: round;
+                stroke: var(--accent-color);
+                stroke-dasharray: 100 100;
+                stroke-width: 1.2px;
+                // For animations...
+                transition: stroke-dashoffset 1s ease-in-out;
+                will-change: transform;
+            }
+        }
+
+        .text {
+            position: absolute;
+            text-align: center;
+            padding-top: 13.9rem;
+
+            .time {
+                margin-bottom: 1.9rem;
+                font-size: 10rem;
+                line-height: 12.4rem;
+                letter-spacing: -5px;
+            }
+
+            .control {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                letter-spacing: 15px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+}
+
+@media all and (max-width: 620px) {
+    .counter {
+        width: 30rem;
+        height: 30rem;
+
+        .wrapper {
+            width: 26.8rem;
+            height: 26.8rem;
+
+            .progress {
+                .progress-background {
+                    stroke-width: 1.1px;
+                }
+
+                .progress-main {
+                    stroke-width: 1.1px;
+                }
+            }
+
+            .text {
+                padding-top: 9.59rem;
+
+                .time {
+                    margin-bottom: 1.2rem;
+                    font-size: 8rem;
+                    line-height: 9.9rem;
+                    letter-spacing: -4px;
+                }
+
+                .control {
+                    font-size: 1.4rem;
+                    line-height: 1.7rem;
+                    letter-spacing: 13.125px;
+                }
+            }
+
+        }
+    }
+}

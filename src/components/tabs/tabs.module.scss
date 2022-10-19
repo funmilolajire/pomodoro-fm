@@ -1,0 +1,51 @@
+.tabs {
+    display: flex;
+    align-items: center;
+    width: 37.3rem;
+    height: 6.3rem;
+    background: #161932;
+    border-radius: 31.5px;
+    padding: 0.7rem;
+    margin-bottom: 4.5rem;
+    position: relative;
+    z-index: 1;
+
+    button {
+        width: 12rem;
+        height: 4.8rem;
+        border-radius: 26.5px;
+        opacity: 0.4;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+
+        &:not(.active):hover {
+            opacity: 1;
+        }
+    }
+
+    .active {
+        background-color: var(--accent-color);
+        color: #1E213F;
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .tabs {
+        margin-bottom: 10.9rem;
+    }
+}
+
+@media all and (max-width: 620px) {
+    .tabs {
+        width: 32.7rem;
+        padding: 0.7rem 0.6rem;
+        margin-bottom: 4.8rem;
+
+        button {
+            width: 10.6rem;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+    }
+}

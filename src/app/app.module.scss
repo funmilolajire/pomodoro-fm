@@ -1,0 +1,65 @@
+.app {
+    height: 100vh;
+    width: 100vw;
+    background: #1E213F;
+    color: #D7E0FF;
+    padding: 4.8rem 0 5.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+
+    .title {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        text-align: center;
+        margin-bottom: 5.5rem;
+    }
+
+    .settings {
+        margin-top: 6.3rem;
+
+        &:hover {
+            path {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.app::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+@media all and (max-width: 768px) {
+    .app {
+        padding: 8rem 0 10.3rem;
+        max-width: 100vw;
+        width: auto;
+        min-height: 100vh;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+
+        .settings {
+            margin-top: 14.4rem;
+        }
+    }
+}
+
+@media all and (max-width: 620px) {
+    .app {
+        padding: 3.2rem 0 4.8rem;
+
+        .title {
+            font-size: 2.4rem;
+            line-height: 3rem;
+            margin-bottom: 4.5rem;
+        }
+
+        .settings {
+            margin-top: 7.9rem;
+        }
+    }
+}
