@@ -65,7 +65,10 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const handleModal = (value: boolean) => setOpenModal(value);
   return (
-    <section className={styles.app} style={style}>
+    <section
+      className={`${styles.app} ${openModal ? styles["open-modal"] : ""}`}
+      style={style}
+    >
       <h1 className={styles.title}>pomodoro</h1>
       <Tabs activeTab={activeTab} changeTab={changeTab} />
       <Counter

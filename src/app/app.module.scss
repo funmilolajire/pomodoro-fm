@@ -9,6 +9,12 @@
     align-items: center;
     font-weight: 700;
 
+    &.open-modal {
+        overflow: hidden;
+        position: fixed;
+        inset: 0;
+    }
+
     .title {
         font-size: 3.2rem;
         line-height: 4rem;
