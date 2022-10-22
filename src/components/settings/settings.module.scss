@@ -255,6 +255,7 @@
 @media all and (max-width: 620px) {
     .settings-overlay {
         padding: 2.4rem;
+        align-items: flex-start;
     }
 
     .settings {
@@ -273,7 +274,7 @@
 
     .body {
         overflow-y: auto;
-        max-height: 50vh;
+        max-height: 60vh;
 
         section {
             padding: 2.4rem 0;
